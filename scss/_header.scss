@@ -6,7 +6,6 @@ $headerBg: #FC4949;
 }
 .the-nav {
 	text-align: right;
-
 	> a {
 		display: none;
 	}
@@ -36,6 +35,9 @@ $headerBg: #FC4949;
 			text-decoration: none;
 			color: white;
 			display: block;
+			background: $headerBg;
+			@include transition-property(all);
+    		@include transition-duration(.2s);
 		}
 		:hover a{
 			background: darken($headerBg, 50%);

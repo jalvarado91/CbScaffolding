@@ -697,6 +697,11 @@ or wrap each row of columns in a <div class="row"> */
   text-decoration: none;
   color: white;
   display: block;
+  background: #fc4949;
+  -webkit-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 0.2s;
+  transition-duration: 0.2s;
 }
 
 .the-nav li :hover a {
