@@ -1,0 +1,96 @@
+/*
+* CB Grid
+* Juan Alvarado
+* Free to use under the MIT license.
+* http://www.opensource.org/licenses/mit-license.php
+* 6/20/2012
+*/
+
+
+/* Table of Contents
+==================================================
+    #Base Grid
+    #Tablet (Portrait)
+    #Mobile (Portrait)
+    #Mobile (Landscape)
+    #Clearing */
+
+
+
+/* #Base Grid
+================================================== */
+
+    .container                                  { max-width: 960px; margin: 0 auto; padding: 0; }
+    
+    .container .column,
+    .container .columns                         { float: left; display: inline; padding-left: 10px; padding-right: 10px; }
+    
+    .container.reverse .column,
+    .container.reverse .columns,
+    .row.reverse .column,
+    .row.reverse .columns                       { float: right; }
+
+    .row                                        { margin-bottom: 20px; }
+
+    /* Nested Column Classes */
+    .column.alpha, .columns.alpha               { padding-left: 0; }
+    .column.omega, .columns.omega               { padding-right: 0; }
+
+    .container .one.column,
+    .container .one.columns                     { width: 8.33%; }
+    .container .two.columns                     { width: 16.66%; }
+    .container .three.columns                   { width: 25%; }
+    .container .four.columns                    { width: 33.33%; }
+    .container .five.columns                    { width: 41.66%; }
+    .container .six.columns                     { width: 50%; }
+    .container .seven.columns                   { width: 58.33%; }
+    .container .eight.columns                   { width: 66.66%; }
+    .container .nine.columns                    { width: 75%; }
+    .container .ten.columns                     { width: 83.33%; }
+    .container .eleven.columns                  { width: 91.66%; }
+    .container .twelve.columns                  { width: 100%; }
+
+    .container .one-third.column                { width: 33.33%; }
+    .container .two-thirds.column               { width: 66.66%; }
+
+    .container .one-fifth.column                { width: 20%; }
+    .container .two-fifths.column               { width: 40%; }
+    .container .three-fifths.column             { width: 60%; }
+    .container .four-fifths.column              { width: 80%; }
+
+
+
+/* #Clearing
+================================================== */
+
+    /* Self Clearing Goodness */
+    .container:after { content: "\0020"; display: block; height: 0; clear: both; visibility: hidden; }
+
+    /* Use clearfix class on parent to clear nested columns,
+    or wrap each row of columns in a <div class="row"> */
+    .clearfix:before,
+    .clearfix:after,
+    .row:before,
+    .row:after {
+      content: '\0020';
+      display: block;
+      overflow: hidden;
+      visibility: hidden;
+      width: 0;
+      height: 0; }
+    .row:after,
+    .clearfix:after {
+      clear: both; }
+    .row,
+    .clearfix {
+      zoom: 1; }
+
+    /* You can also use a <br class="clear" /> to clear columns */
+    .clear {
+      clear: both;
+      display: block;
+      overflow: hidden;
+      visibility: hidden;
+      width: 0;
+      height: 0;
+    }
